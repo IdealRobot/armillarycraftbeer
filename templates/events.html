@@ -1,37 +1,71 @@
-<div class="tap-category">
+{% extends "base.html" %}
 
-    <h2>Events</h2>
+{% block title %}Events | Armillary Brewing{% endblock %}
 
-    <div class="tap-grid">
+{% block content %}
 
-        <article class="tap-card">
+<section class="beer-hero">
+    <p class="eyebrow">Taproom Events</p>
 
-            <div class="tap-card-top">
-                <h3>Bingo Night</h3>
-                <span>Weekly</span>
-            </div>
+    <h1>Events</h1>
 
-            <p>
-                Join us for a seriously fun night of bingo featuring
-                amazing prizes, fresh beer, and a great taproom crowd.
-            </p>
+    <p>
+        Great beer, great people, and more reasons to spend Wednesday night
+        at Armillary Brewing.
+    </p>
+</section>
 
-        </article>
+<section class="tap-menu">
 
-        <article class="tap-card">
+    <div class="tap-category">
 
-            <div class="tap-card-top">
-                <h3>Wednesday Trivia</h3>
-                <span>Coming Soon</span>
-            </div>
+        <h2>Happening Now</h2>
 
-            <p>
-                Weekly Wednesday trivia is currently in the works.
-                More details will be announced soon.
-            </p>
+        <div class="tap-grid">
 
-        </article>
+            <article class="tap-card">
+
+                <div class="tap-card-top">
+                    <h3>Bingo Night</h3>
+                    <span>Weekly</span>
+                </div>
+
+                <p>
+                    Join us for a seriously fun night of bingo with fresh beer,
+                    an energetic taproom crowd, and genuinely amazing prizes.
+                </p>
+
+            </article>
+
+        </div>
 
     </div>
 
-</div>
+    <div class="tap-category">
+
+        <h2>Coming Soon</h2>
+
+        <div class="tap-grid">
+
+            <article class="tap-card">
+
+                <div class="tap-card-top">
+                    <h3>Wednesday Trivia</h3>
+                    <span>In The Works</span>
+                </div>
+
+                <p>
+                    Weekly Wednesday trivia is currently in development.
+                    More details, including the official start date and time,
+                    will be announced soon.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
