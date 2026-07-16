@@ -1,0 +1,119 @@
+{% extends "brewery/base.html" %}
+
+{% block title %}Current Beers | Armillary Brewing{% endblock %}
+
+{% block content %}
+
+<section class="beer-hero">
+    <p class="eyebrow">On Tap Now</p>
+    <h1>Current Beers</h1>
+    <p>
+        Rotating small-batch beers brewed with balance, character,
+        and a little cosmic chaos.
+    </p>
+</section>
+
+<section class="tap-menu">
+
+    <div class="tap-category">
+        <h2>Hoppy</h2>
+
+        <div class="tap-grid">
+
+            <article class="tap-card">
+                <div class="tap-card-top">
+                    <h3>Rye Pale Ale</h3>
+                    <span>5% ABV</span>
+                </div>
+                <p>
+                    American-style pale ale brewed with 30% rye malt, caramel malt,
+                    Citra, and Cascade hops.
+                </p>
+            </article>
+
+            <article class="tap-card">
+                <div class="tap-card-top">
+                    <h3>Sessionable IPA</h3>
+                    <span>4.8% ABV</span>
+                </div>
+                <p>
+                    West Coast session IPA with crystal malt for balance,
+                    then hopped with Galaxy and Citra.
+                </p>
+            </article>
+
+            <article class="tap-card">
+                <div class="tap-card-top">
+                    <h3>Chixulub Impactor</h3>
+                    <span>5.5% ABV</span>
+                </div>
+                <p>
+                    Fossil Brewing Co. collab. Quaffable IPL with Pilsner,
+                    Vienna malt, Strata, Belma, and Lemondrop.
+                </p>
+            </article>
+
+        </div>
+    </div>
+
+    <div class="tap-category">
+        <h2>Malty</h2>
+
+        <div class="tap-grid">
+
+            <article class="tap-card">
+                <div class="tap-card-top">
+                    <h3>Irish Red</h3>
+                    <span>6% ABV</span>
+                </div>
+                <p>
+                    Big caramel and toffee notes. Lightly hopped for balance.
+                </p>
+            </article>
+
+            <article class="tap-card featured-beer">
+                <div class="tap-card-top">
+                    <h3>Imperial Porter</h3>
+                    <span>8.5% ABV</span>
+                </div>
+                <p>
+                    Duces Wild Brewery collab aged in red wine barrels from Abbey Winery.
+                    Roasty, chocolatey, caramel-forward, with a light wine undertone.
+                </p>
+            </article>
+
+        </div>
+    </div>
+
+    <div class="tap-category">
+        <h2>Fruity / Tart</h2>
+
+        <div class="tap-grid">
+
+            <article class="tap-card">
+                <div class="tap-card-top">
+                    <h3>Second Banana</h3>
+                    <span>5% ABV</span>
+                </div>
+                <p>
+                    South German-style Hefeweizen with a banana creamsicle profile.
+                    Refreshing on a warm day.
+                </p>
+            </article>
+
+            <article class="tap-card">
+                <div class="tap-card-top">
+                    <h3>Blueberry Tart</h3>
+                    <span>5.2% ABV</span>
+                </div>
+                <p>
+                    Brewed with pure blueberry puree. Bright, tart, and refreshing.
+                </p>
+            </article>
+
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}

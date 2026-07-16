@@ -1,0 +1,458 @@
+/* ARMILLARY BREWERY THEME */
+
+:root {
+    --bg-main: #050912;
+    --bg-panel: #0b1220;
+    --bg-card: #111827;
+
+    --text-main: #f3f4f6;
+    --text-muted: #aeb6c2;
+
+    --silver: #d7d7d7;
+    --steel: #6f7680;
+
+    --purple: #8a2be2;
+    --magenta: #d33682;
+    --orange: #ff7a3d;
+    --blue: #2fb7ff;
+
+    --border-soft: rgba(255, 255, 255, 0.12);
+    --glow-purple: rgba(138, 43, 226, 0.35);
+    --glow-blue: rgba(47, 183, 255, 0.35);
+    --glow-orange: rgba(255, 122, 61, 0.3);
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(138, 43, 226, 0.22), transparent 32%),
+        radial-gradient(circle at top right, rgba(47, 183, 255, 0.18), transparent 30%),
+        radial-gradient(circle at center, rgba(255, 122, 61, 0.10), transparent 35%),
+        var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+}
+
+/* NAVIGATION */
+
+.nav {
+    background: rgba(5, 9, 18, 0.9);
+    border-bottom: 1px solid var(--border-soft);
+    backdrop-filter: blur(12px);
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 22px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--silver);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 26px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+    text-shadow: 0 0 12px var(--glow-blue);
+}
+
+/* MAIN */
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 24px;
+    min-height: 80vh;
+}
+
+/* GENERAL HERO */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--silver);
+    text-shadow:
+        0 0 20px var(--glow-purple),
+        0 0 40px var(--glow-blue);
+    max-width: 900px;
+}
+
+.hero p {
+    margin-top: 24px;
+    max-width: 620px;
+    color: var(--text-muted);
+    font-size: 1.15rem;
+}
+
+/* BUTTONS */
+
+.btn,
+button {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 13px 24px;
+
+    color: var(--text-main);
+    background: linear-gradient(135deg, var(--magenta), var(--blue));
+    border: 1px solid var(--border-soft);
+    border-radius: 999px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 0.85rem;
+
+    box-shadow:
+        0 0 22px var(--glow-purple),
+        0 0 30px var(--glow-blue);
+
+    transition: 0.2s ease;
+}
+
+.btn:hover,
+button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 30px var(--glow-purple),
+        0 0 40px var(--glow-blue);
+}
+
+/* SHARED SECTIONS */
+
+.section {
+    margin: 80px 0;
+}
+
+.section-header {
+    margin-bottom: 32px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--silver);
+}
+
+.section-header p {
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+/* SHARED CARD GRID */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)),
+        var(--bg-card);
+
+    border: 1px solid var(--border-soft);
+    border-radius: 22px;
+    padding: 28px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.card h3 {
+    color: var(--silver);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-muted);
+}
+
+/* CURRENT BEERS PAGE */
+
+.beer-hero {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 75px;
+    padding: 40px 20px 10px;
+}
+
+.eyebrow {
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.beer-hero h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--silver);
+    text-shadow:
+        0 0 20px var(--glow-purple),
+        0 0 35px var(--glow-blue);
+}
+
+.beer-hero p {
+    color: var(--text-muted);
+    font-size: 1.12rem;
+    margin-top: 22px;
+}
+
+.tap-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.tap-category h2 {
+    color: var(--orange);
+    font-size: 1.65rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.tap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.tap-card {
+    min-height: 230px;
+    padding: 28px;
+    border-radius: 24px;
+    border: 1px solid var(--border-soft);
+
+    background:
+        radial-gradient(circle at top left, rgba(211, 54, 130, 0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(47, 183, 255, 0.14), transparent 35%),
+        rgba(255, 255, 255, 0.045);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35),
+        inset 0 0 30px rgba(255,255,255,0.025);
+
+    transition: 0.2s ease;
+}
+
+.tap-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(47, 183, 255, 0.45);
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.45),
+        0 0 28px var(--glow-blue);
+}
+
+.tap-card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.tap-card h3 {
+    color: var(--silver);
+    font-size: 1.35rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.tap-card span {
+    flex-shrink: 0;
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.tap-card p {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+}
+
+.featured-beer {
+    grid-column: span 2;
+}
+
+/* FOOTER */
+
+.footer {
+    border-top: 1px solid var(--border-soft);
+    background: rgba(5, 9, 18, 0.95);
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 44px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer h3 {
+    color: var(--silver);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer p,
+.footer a {
+    color: var(--text-muted);
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer-links {
+    display: flex;
+    gap: 22px;
+}
+
+.logo-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 28px 24px 10px;
+}
+
+.main-logo {
+    width: clamp(220px, 32vw, 420px);
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0 30px rgba(47, 183, 255, 0.25));
+}
+
+.nav-inner {
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 22px;
+}
+
+.nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .tap-grid,
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-beer {
+        grid-column: span 1;
+    }
+
+    .tap-card-top {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .nav-inner,
+    .footer-inner {
+        flex-direction: column;
+        gap: 22px;
+        text-align: center;
+    }
+
+    .nav-links,
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 420px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .page-content {
+        padding: 48px 18px;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .logo-wrap {
+        padding: 22px 18px 8px;
+    }
+
+    .main-logo {
+        width: clamp(180px, 70vw, 300px);
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+}

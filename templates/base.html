@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Armillary Brewery{% endblock %}</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Main Brewery CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/brewery.css') }}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- Navigation -->
+<header class="nav">
+
+    <div class="logo-wrap">
+        <a href="/armillary">
+            <img src="{{ url_for('static', filename='img/armlogo.png') }}" alt="Armillary Brewing Logo" class="main-logo">
+        </a>
+    </div>
+
+    <div class="nav-inner">
+
+        <nav class="nav-links">
+            <a href="/armillary">Home</a>
+            <a href="/armillary/beers">Current Beers</a>
+            <a href="/armillary/events">Events</a>
+            <a href="/armillary/food">Food</a>
+            <a href="/armillary/about">About</a>
+            <a href="/armillary/contact">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <h3>Armillary Brewery</h3>
+                <p>Craft beer. Community. Colorado.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="/armillary">Home</a>
+                <a href="/armillary/beers">Beers</a>
+                <a href="/armillary/events">Events</a>
+                <a href="/armillary/contact">Contact</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
